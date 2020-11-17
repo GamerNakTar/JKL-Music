@@ -211,6 +211,52 @@ section {
   font-family: 'Big Shoulders Display';
   line-height: 35px;
 }
+.seq_artist_location {
+  position: inherit;
+  left: 38px;
+  top: 1px;
+  font-size: 11px;
+  color: #FFFFFF;
+  font-family: 'Big Shoulders Display';
+  display: inline-block;
+}
+.fixed_footbar {
+  position: fixed;
+  padding: 4px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #5E5E5E;
+  color: #FFFFFF;
+  text-align: left;
+  display: inline-block;
+}
+.seq_title_location {
+  position: inherit;
+  left: 38px;
+  top: 0px;
+  font-size: 15px;
+  color: #FFFFFF;
+  font-family: 'Big Shoulders Display';
+  display: inline-block;
+}
+.seq_jacket_location {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 7.5px;
+  left: 7.5px;
+  background-color: #FFFFFF;
+  display: inline-block;
+}
+.button_pause {
+  position: relative;
+  left: 100px;
+  height: auto;
+  top: 9px;
+  display: inline-block;
+}
 @keyframes pulse {
   from {background-color: #5E5E5E; margin-left: 0%; width: auto}
   to {background-color: #F4FAF1; margin-left: 10%; width: 80%}
