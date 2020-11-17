@@ -1,7 +1,6 @@
-<link href="https://fonts.googleapis.com/css?family=Abel" rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Big Shoulders Display' rel='stylesheet'>
 body {
   margin: 0;
+  padding: 0;
 }
 header {
   background-color: #2C454B;
@@ -11,6 +10,8 @@ header {
   height: 65px;
   display: block;
   width: 100%;
+  left: 0px;
+  top: 0px;
 }
 .headertext {
   display: block;
@@ -51,10 +52,11 @@ nav {
   height: 95%;
   position: fixed;
   left: 0px;
-  top: 73px;
+  top: 95px;
   padding: 0;
   margin: 0;
   display: block;
+  background-color: #474A45;
 }
 ul {
   list-style-type: none;
@@ -67,34 +69,73 @@ ul {
 li a {
   display: block;
   width: 100%;
-  color: #000;
+  color: #FFFFFF;
   padding: 8px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  background-color: #5E5E5E;
 }
-li a:hover {
-  background-color: blue;
-  color: white;
-  width: auto;
+.idle {
+  animation-name: pulse-reverse;
+  animation-duration: 0.35s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.idle:hover {
+  color: #000000;
+  animation-name: pulse;
+  animation-duration: 0.35s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 section {
   width: 85%;
   height: 95%;
   position: fixed;
-  top: 73px;
+  top: 95px;
   left: 15%;
-  background-image: linear-gradient(to bottom right, #CCDFE2, #8FC7CF, #458891);
 }
 .active {
-  background-color: #4CAF50;
-  color: white;
-  width: auto;
+  background-color: #F4FAF1;
+  color: #6CC274;
+  margin-left: 10%;
 }
 .cont4{
+  position: relative;
+  top: 70px;
   text-align: center;
   color: #FFFFFF;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
+}
+.cont5{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #D4FAC0, #8FC7CF, #458891);
+}
+.main_jacket_location {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 5%;
+  left: 10%;
+  background-color: #FFFFFF
+}
+.main_title_location {
+  position: inherit;
+  left: 115px;
+  top: 10px;
+  font-size: 45px;
+  color: white;
+  font-family: 'Big Shoulders Display'
+}
+.main_artist_location {
+  position: inherit;
+  left: 115px;
+  top: 10px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Big Shoulders Display'
 }
 .imgcont {
   position: relative;
@@ -148,8 +189,10 @@ section {
   height: 22px;
   width: auto;
   position: relative;
+  top: 73px;
   color: #E3E7E4;
-  padding-left:10px;
+  padding-left: 0px;
+  margin: 0px;
 }
 .headerbelowtext {
   position: absolute;
@@ -168,85 +211,6 @@ section {
   font-family: 'Big Shoulders Display';
   line-height: 35px;
 }
-
-
-
-
-
-li a {
-  display: block;
-  width: auto;
-  color: #FFFFFF;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-size: 18px;
-  background-color: #5E5E5E;
-}
-.idle {
-  animation-name: pulse-reverse;
-  animation-duration: 0.35s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.idle:hover {
-  color: #000000;
-  animation-name: pulse;
-  animation-duration: 0.35s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-section {
-  width: 85%;
-  height: 500px;
-  position: relative;
-  right: 0px;
-
-  float: right;
-}
-.active {
-  background-color: #F4FAF1;
-  color: #6CC274;
-  width: 80%;
-  margin-left: 10%;
-}
-.cont4{
-  position: relative;
-  top: 70px;
-  text-align: center;
-
-  color: #FFFFFF;
-  font-size: 25px;
-  font-family: "Times New Roman", Times, serif;
-}
-.cont5{
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom right, #D4FAC0, #8FC7CF, #458891);
-}
-.main_jacket_location {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  top: 5%;
-  left: 10%;
-  background-color: #FFFFFF
-}
-.main_title_location {
-  position: inherit;
-  left: 115px;
-  top: 10px;
-  font-size: 45px;
-  color: white;
-  font-family: 'Big Shoulders Display'
-}
-.main_artist_location {
-  position: inherit;
-  left: 115px;
-  top: 10px;
-  font-size: 18px;
-  color: white;
-  font-family: 'Big Shoulders Display'
-}
 @keyframes pulse {
   from {background-color: #5E5E5E; margin-left: 0%; width: auto}
   to {background-color: #F4FAF1; margin-left: 10%; width: 80%}
@@ -261,7 +225,4 @@ section {
   90% {opacity: 100%}
   100% {left: 85%; opacity: 0%}
 }
-
 #linear {animation-timing-function: linear;}
-
-</style>
