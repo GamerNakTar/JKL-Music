@@ -19,7 +19,7 @@ function initPage(){
     canvas.height = window.innerHeight;
 
     // find the center of the window
-    center_x = canvas.width / 2 - 130;
+    center_x = canvas.width / 2;
     center_y = canvas.height / 2;
 
     // draw canvas
@@ -66,25 +66,32 @@ function animationLooper(){
     ctx.fillStyle = gradient;
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    // draw play button
-    ctx.beginPath();
-    ctx.moveTo(center_x, center_y - 50);
-    ctx.lineTo(center_x+ 50, center_y);
-    ctx.lineTo(center_x, center_y + 50)
-    ctx.closePath();
-    ctx.fillStyle = "#ff0000";
-    ctx.fill();
-
     //draw a circle
+    // draw play button
     if( dis > 100 ) {
       radius = 100;
       barLength = 0.3;
+      ctx.beginPath();
+      ctx.moveTo(center_x - 25, center_y - 50);
+      ctx.lineTo(center_x + 50, center_y);
+      ctx.lineTo(center_x - 25, center_y + 50)
+      ctx.closePath();
+      ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+      ctx.fill();
     }
     else {
       radius = 110;
       barLength = 0.5;
+      ctx.beginPath();
+      ctx.moveTo(center_x - 30, center_y - 60);
+      ctx.lineTo(center_x + 60, center_y);
+      ctx.lineTo(center_x - 30, center_y + 60)
+      ctx.closePath();
+      ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+      ctx.fill();
     }
 
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
     ctx.beginPath();
     ctx.arc(center_x,center_y,radius,0,2*Math.PI);
     ctx.stroke();
